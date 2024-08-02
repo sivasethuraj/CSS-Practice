@@ -1,0 +1,39 @@
+:root {
+    --color-light: lightgray;
+    --color-dark: rgb(131, 127, 127);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    height: 1.5em;
+    width: 1.5em;
+    background: var(--color-dark);
+    margin: 0.5em;
+    border-radius: 50%;
+    animation: pulse infinite alternate 1s;
+}
+
+@keyframes pulse {
+    from {
+        background-color: var(--color-dark);
+    }
+
+    to {
+        background-color: var(--color-light);
+        height: 1.6em;
+        width: 1.6em;
+    }
+}

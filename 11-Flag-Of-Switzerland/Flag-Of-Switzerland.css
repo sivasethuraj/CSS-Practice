@@ -1,0 +1,49 @@
+:root {
+    --white: #fff;
+    --red: #ff0002;
+    --flag-hw: 200px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.flag-swiss {
+    height: var(--flag-hw);
+    width: var(--flag-hw);
+    background: var(--red);
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* reference for easy to method */
+
+/* .cross {
+    height: calc(var(--flag-hw) * 3/16);
+    width: calc(var(--flag-hw) * 5/8);
+    background: #fff;
+    position: absolute;
+}
+
+.cross2 {
+    transform: rotate(90deg);
+} */
+
+.cross1 {
+    height: calc(var(--flag-hw) * 3/16);
+    width: calc(var(--flag-hw) * 5/8);
+    background: #fff;
+}
+
+.cross2 {
+    height: calc(var(--flag-hw) * 5/8);
+    width: calc(var(--flag-hw) * 3/16);
+    background: #fff;
+    position: absolute;
+}

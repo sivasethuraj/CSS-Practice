@@ -1,0 +1,49 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-word: #5134ff;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1::after {
+    content: "";
+    animation: 6s swap infinite;
+    padding: 10px;
+    background-color: var(--bg-word);
+    color: white;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+@keyframes swap {
+    0% {
+        content: "Coding";
+    }
+
+    25% {
+        content: "Scrimba";
+    }
+
+    50% {
+        content: "FreeCodeCamp";
+    }
+
+    75% {
+        content: "Running";
+    }
+
+    100% {
+        content: "Coding";
+    }
+}

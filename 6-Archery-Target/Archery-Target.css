@@ -1,0 +1,48 @@
+:root {
+    --black: #282828;
+    --blue: #2892f9;
+    --red: #fb2f27;
+    --yellow: #fdfe29;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container,
+.circle {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.circle1 {
+    height: 200px;
+    width: 200px;
+    background: var(--black);
+}
+
+.circle2 {
+    height: 150px;
+    width: 150px;
+    background: var(--blue);
+}
+
+.circle3 {
+    height: 100px;
+    width: 100px;
+    background: var(--red);
+}
+
+.circle4 {
+    height: 50px;
+    width: 50px;
+    background: var(--yellow);
+}
