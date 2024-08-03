@@ -1,0 +1,41 @@
+:root {
+    --card-height: 200px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+}
+
+.card {
+    height: var(--card-height);
+    width: calc(var(--card-height) * 2/3);
+    border: 1px solid #000;
+    padding: .25em;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: 10% 80% 10%;
+    font-size: 1.25em;
+}
+
+.middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+.right,
+.middle :nth-child(3),
+.middle :nth-child(4) {
+    transform: rotate(180deg);
+}
