@@ -2,10 +2,13 @@
     color: darkblue;
     font-size: 1rem;
     text-align: center;
-    transition-property: font-size;
+
+    /* transition-property: font-size;
     transition-delay: 1s;
     transition-duration: .5s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in; */
+
+    transition: all .5s ease;
 }
 
 .heading:hover {
@@ -13,5 +16,3 @@
     font-size: 2rem;
     /* letter-spacing: .4em; */
 }
-
-/* font-size  1s delay, .5s run through, easein timing function */
