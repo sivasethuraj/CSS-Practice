@@ -2,17 +2,11 @@
     color: darkblue;
     font-size: 1rem;
     text-align: center;
-
-    /* transition-property: font-size;
-    transition-delay: 1s;
-    transition-duration: .5s;
-    transition-timing-function: ease-in; */
-
-    transition: all .5s ease;
+    transition: all 1s ease-in 1s;
 }
 
 .heading:hover {
     color: green;
-    font-size: 2rem;
+    font-size: 10px;
     /* letter-spacing: .4em; */
 }
