@@ -1,12 +1,66 @@
-.heading {
-    color: darkblue;
-    font-size: 1rem;
-    text-align: center;
-    transition: all 1s ease-in 1s;
+:root {
+    --hover-color: #1f93ff;
 }
 
-.heading:hover {
-    color: green;
-    font-size: 10px;
-    /* letter-spacing: .4em; */
+html,
+body {
+
+    font-family: Roboto, sans-serif;
+    color: black;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    background: #bdceff;
+    border-bottom: 3px solid #0e5d;
+    height: 3em;
+    justify-content: space-around;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: black;
+    transition: all .3s ease-out;
+    line-height: 1rem;
+}
+
+.menu-item {
+    align-self: center;
+    margin: 5px;
+}
+
+.title-wrapper {
+    margin: 0;
+    background: #bdceff;
+    border-bottom: 3px solid #0e5d;
+    padding: 10px;
+}
+
+.title {
+    margin: 0;
+    width: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: center;
+    transition: color .6s ease-out;
+}
+
+.image {
+    width: 100%;
+}
+
+/* to be done */
+
+.title:hover {
+    color: var(--hover-color);
+}
+
+.menu-link:hover {
+    color: var(--hover-color);
+    font-size: 1.2em;
 }
