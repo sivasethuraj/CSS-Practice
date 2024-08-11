@@ -16,7 +16,7 @@ body {
 
 @keyframes transform {
     100% {
-        transform: rotate(180deg);
+        transform: skew(50deg);
         /* transform: translate(50px, 50px); */
     }
 }
