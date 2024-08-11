@@ -8,6 +8,9 @@ body {
     /* background: red; */
     border: 1px solid black;
     animation: transform 2s ease-in-out 1s infinite alternate both;
+    -moz-animation: transform 2s ease-in-out 1s infinite alternate both;
+    -webkit-animation: transform 2s ease-in-out 1s infinite alternate both;
+    -o-animation: transform 2s ease-in-out 1s infinite alternate both;
 }
 
 .box-red {
@@ -28,7 +31,7 @@ body {
 
 @keyframes transform {
     to {
-        transform: translate(50vw, 50vh) scaleX(10) skewY(70deg);
+        transform: translate(50vw, 50vh) scaleX(10) skewY(70deg) rotate(180deg);
         /* transform: translate(50vw, 50vh) scaleX(10) skewX(-60deg); */
         /* transform: scale(0.5) translate(50px, 0px) rotate(45deg); */
         /* transform: translate(50px, 50px); */
