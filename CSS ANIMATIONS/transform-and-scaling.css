@@ -3,20 +3,34 @@ body {
 }
 
 .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
-    background: red;
+    /* background: red; */
     border: 1px solid black;
-    animation: transform 2s infinite;
+    animation: transform 2s ease-in-out 1s infinite alternate both;
+}
+
+.box-red {
+    background: red;
+}
+
+.box-blue {
+    background: blue;
+}
+
+.box-green {
+    background: green;
+}
+
+.box-orange {
+    background: orange;
 }
 
 @keyframes transform {
-    100% {
-        transform: scale(0.5) translate(50px, 0px) rotate(45deg);
+    to {
+        transform: translate(50vw, 50vh) scaleX(10) skewY(70deg);
+        /* transform: translate(50vw, 50vh) scaleX(10) skewX(-60deg); */
+        /* transform: scale(0.5) translate(50px, 0px) rotate(45deg); */
         /* transform: translate(50px, 50px); */
     }
 }
