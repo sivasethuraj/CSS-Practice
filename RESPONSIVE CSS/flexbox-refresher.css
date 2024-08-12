@@ -1,0 +1,98 @@
+/* 
+h1: 3rem
+h2: 1.5rem
+body: 1.125rem
+
+layout max-width: 980px
+*/
+
+:root {
+    --black: #312614;
+    --brown: #b7832f;
+    --gray: #707070;
+    --white: #fff;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-size: 1.25rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 3rem;
+    color: var(--black);
+    text-align: center;
+}
+
+h1 span {
+    color: var(--brown);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* Layout */
+
+img {
+    width: 100%;
+    height: 150px;
+}
+
+p {
+    margin-top: 0;
+}
+
+.container {
+    width: 95%;
+    max-width: 980px;
+    margin: 0 auto;
+    /* border: 2px solid mediumseagreen */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1em 0;
+}
+
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 45%;
+}
+
+.col-3 {
+    width: 70%;
+}
+
+.col-bg {
+    background: var(--black);
+    color: var(--white);
+    padding: 1em;
+}
+
+@media (max-width:600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .container {
+        max-width: 100vw;
+    }
+
+    .col {
+        width: 100vw;
+        /* border: solid 2px greenyellow; */
+    }
+}

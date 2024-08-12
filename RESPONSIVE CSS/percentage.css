@@ -1,0 +1,61 @@
+html,
+body {
+    margin: 0;
+    font-size: 20px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: tomato;
+}
+
+.btn {
+    padding: .2rem .5rem;
+    margin: .1rem .3rem;
+    border-radius: .3rem;
+}
+
+.btn-accent {
+    background: #ef5e33;
+    color: #fff;
+}
+
+.btn-white {
+    color: #000;
+    background: #fff;
+
+}
+
+header {
+    background: #2e354f;
+    padding: 1rem 0;
+    color: #fff;
+    width: 100%;
+}
+
+section {
+    padding: 45px .2rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+    /* border: 2px solid magenta; */
+}
+
+.section-one h2 {
+    color: red;
+}
+
+.section-two {
+    background: #2e354f;
+    color: #fff;
+}
