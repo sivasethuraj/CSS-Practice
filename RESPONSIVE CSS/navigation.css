@@ -1,0 +1,105 @@
+/* 
+title: font1 3.37rem
+subtitle, navigation: font2 1rem
+*/
+
+:root {
+    --white: #F8F8F8;
+    --brown: #707070;
+    --af-blue: #1792D2;
+    --dark-blue: #143774;
+    --font1: "Lora", serif;
+    --font2: "Ubuntu", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font2);
+}
+
+/* 
+Typography
+ */
+h1 {
+    font-family: var(--font1);
+    font-weight: 400;
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: var(--af-blue);
+    font-size: .75rem;
+    margin: 0;
+}
+
+/* 
+Layout
+ */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* border: 1px solid magenta; */
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    background: var(--white);
+    padding: 2em 0;
+    box-shadow: 0 .2em 1em #707070;
+}
+
+
+/* navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--brown);
+    padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792D2;
+}
+
+.current-page {
+    /* border-bottom: 1px solid var(--brown); */
+}
+
+.current-page:hover {
+    color: var(--brown);
+}
+
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: .5em 0;
+    }
+}
