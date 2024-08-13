@@ -15,17 +15,55 @@ subtitle, navigation: font2 1rem
 body {
     margin: 0;
     font-family: var(--font2);
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.img-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
 }
 
 /* 
 Typography
  */
-h1 {
+h1,
+h2,
+h3 {
     font-family: var(--font1);
     font-weight: 400;
     color: var(--dark-blue);
+}
+
+h1 {
+    color: var(--dark-blue);
     font-size: 2rem;
     margin: 0;
+}
+
+h3 {
+    color: var(--af-blue);
+}
+
+a {
+    color: var(--af-blue);
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    color: var(--dark-blue);
+}
+
+strong {
+    font-weight: 700;
 }
 
 .subtitle {
@@ -33,6 +71,31 @@ h1 {
     color: var(--af-blue);
     font-size: .75rem;
     margin: 0;
+}
+
+.article-title {
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+    font-size: .75rem;
+}
+
+.article-read-more {
+    color: var(--af-blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.article-info {
+    margin: 2em 0;
 }
 
 /* 
@@ -45,9 +108,10 @@ Layout
     /* border: 1px solid magenta; */
 }
 
-.container-nav {
+.container-flex {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 header {
@@ -55,8 +119,15 @@ header {
     background: var(--white);
     padding: 2em 0;
     box-shadow: 0 .2em 1em #707070;
+    margin-bottom: 1.5em;
 }
 
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 3em 0;
+}
 
 /* navigation */
 nav ul {
@@ -67,7 +138,7 @@ nav ul {
 }
 
 nav li {
-    margin-left: 1em;
+    margin-left: .7em;
 }
 
 nav a {
@@ -83,23 +154,144 @@ nav a:focus {
 }
 
 .current-page {
-    /* border-bottom: 1px solid var(--brown); */
+    position: relative;
+    border-bottom: 3px solid var(--af-blue);
 }
+
+/* .current-page::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: #000;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 1em;
+} */
 
 .current-page:hover {
     color: var(--brown);
 }
 
-@media (max-width: 675px) {
-    .container-nav {
-        flex-direction: column;
+/* Articles */
+
+.article-featured {
+    border-bottom: 3px solid var(--brown);
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+.article-image {
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+/* Widgets */
+
+.sidebar-widget {
+    border: .8rem solid #efefef;
+    margin-bottom: 1em;
+}
+
+.widget-title,
+.widget-recent-post-title {
+    font-size: 1rem;
+}
+
+.widget-recent-post-title {
+    color: var(--dark-blue);
+}
+
+.widget-title {
+    font-family: var(--font2);
+    font-weight: 700;
+}
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--brown);
+    margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+    border: 0;
+    margin-bottom: 0;
+}
+
+.widget-recent-post img {
+    order: 1
+}
+
+.widget-recent-post h3 {
+    order: 2;
+}
+
+/* Media queries */
+@media (min-width:675px) {
+    .container-flex {
+        flex-direction: row;
     }
 
+    main {
+        width: 70%;
+    }
+
+    aside {
+        width: 25%;
+    }
+}
+
+@media (max-width: 675px) {
     nav ul {
         flex-direction: column;
     }
 
     nav li {
         margin: .5em 0;
+    }
+}
+
+@media (min-width:675px) {
+
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-recent-main {
+        width: 65%;
+    }
+
+    .article-recent-secondary {
+        width: 30%;
+    }
+
+    .article-featured {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-image {
+        order: -2;
+    }
+
+    .article-info {
+        order: -1;
     }
 }
